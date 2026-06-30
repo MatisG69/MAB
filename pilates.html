@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilates, Tapis &amp; machines · Move and Breathe Pilates Studio</title>
+<meta name="description" content="Pilates classique au studio Move and Breathe à Roubaix Barbieux. Sur tapis (cours collectifs, petits groupes) et sur machines (Reformer, Cadillac, Chair, Barrel), un véritable enseignement Pilates complet par Coralie Delahaye.">
+<meta name="keywords" content="pilates Roubaix, pilates tapis, reformer Lille, cadillac pilates, wunda chair, ladder barrel, pilates classique">
+<link rel="canonical" href="https://moveandbreathelille.fr/pilates.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pilates, Move and Breathe Pilates Studio">
+<meta property="og:description" content="Pilates sur tapis et sur machines au studio Move and Breathe à Roubaix Barbieux.">
+<meta property="og:url" content="https://moveandbreathelille.fr/pilates.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* ==== INTRO PILATES ==== */
+  .intro-section {
+    background: var(--cream-soft);
+    padding: clamp(4rem, 8vw, 6rem) 0;
+  }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 6vw, 6rem);
+    align-items: center;
+  }
+  .intro-lede {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.25rem, 1.5vw, 1.45rem);
+    line-height: 1.55;
+    color: var(--teal-deep);
+    margin-bottom: 1.75rem;
+    font-weight: 400;
+  }
+  .intro-text {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin-bottom: 1.25rem;
+  }
+  .intro-highlight {
+    background: var(--teal-deep);
+    color: var(--cream);
+    padding: 1.75rem 2rem;
+    border-radius: 2px;
+    margin: 2rem 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    position: relative;
+    overflow: hidden;
+  }
+  .intro-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0;
+    width: 4px;
+    background: var(--sage);
+  }
+  .intro-highlight strong { color: var(--sage); font-weight: 500; }
+
+  .intro-image {
+    aspect-ratio: 4/5;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .intro-image .img-panel-placeholder {
+    background: linear-gradient(160deg, var(--teal-deep), var(--teal) 60%, var(--teal-mid));
+  }
+
+  /* ==== DISCIPLINE BLOCKS ==== */
+  .discipline-block {
+    padding: clamp(4rem, 8vw, 7rem) 0;
+  }
+  .discipline-block.dark {
+    background: var(--teal-deep);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .discipline-block.dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(220, 227, 214, 0.05) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+  .discipline-block.dark .container { position: relative; z-index: 1; }
+  .discipline-block.dark .eyebrow { color: var(--sage); }
+  .discipline-block.dark .eyebrow::before { background: var(--sage); }
+  .discipline-block.dark .h-1,
+  .discipline-block.dark .h-2 { color: var(--cream); }
+  .discipline-block.dark .h-1 em,
+  .discipline-block.dark .h-2 em { color: var(--sage); }
+  .discipline-block.cream { background: var(--cream); }
+
+  .discipline-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: center;
+  }
+  .discipline-grid.reverse { grid-template-columns: 1.1fr 1fr; }
+  .discipline-grid.reverse .discipline-text { order: 2; }
+  .discipline-grid.reverse .discipline-visual { order: 1; }
+
+  .discipline-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 4rem;
+    color: var(--sage-deep);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+  }
+  .discipline-block.dark .discipline-num { color: var(--sage); opacity: 0.6; }
+  .discipline-block .h-1 { margin-bottom: 1.75rem; }
+  .discipline-lede {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+    color: var(--teal-deep);
+  }
+  .discipline-block.dark .discipline-lede { color: var(--cream); }
+  .discipline-text p {
+    font-size: 0.96rem;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin-bottom: 1.25rem;
+  }
+  .discipline-block.dark .discipline-text p { color: rgba(220, 227, 214, 0.75); }
+
+  /* Feature list (Pilates sur tapis benefits) */
+  .feature-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 2rem;
+    margin: 2rem 0 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--beige-deep);
+  }
+  .discipline-block.dark .feature-list { border-top-color: rgba(220, 227, 214, 0.15); }
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .discipline-block.dark .feature-list li { color: rgba(220, 227, 214, 0.85); }
+  .feature-list li::before {
+    content: '';
+    width: 8px; height: 8px;
+    background: var(--teal);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.4rem;
+  }
+  .discipline-block.dark .feature-list li::before { background: var(--sage); }
+
+  /* Machines grid */
+  .machines-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0 2.5rem;
+  }
+  .machine-card {
+    background: rgba(220, 227, 214, 0.08);
+    border: 1px solid rgba(220, 227, 214, 0.15);
+    border-radius: 2px;
+    padding: 1.5rem 1.4rem;
+    transition: all 0.3s var(--ease);
+  }
+  .machine-card:hover {
+    background: rgba(220, 227, 214, 0.13);
+    border-color: var(--sage);
+    transform: translateY(-2px);
+  }
+  .machine-card h4 {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.005em;
+  }
+  .machine-card p {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: rgba(220, 227, 214, 0.65);
+  }
+
+  .discipline-visual {
+    aspect-ratio: 4/5;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .visual-tapis { background: linear-gradient(165deg, var(--beige-deep), var(--sage-deep) 60%, var(--sage)); }
+  .visual-machines { background: linear-gradient(165deg, var(--teal-mid), var(--teal) 60%, var(--teal-deep)); }
+  .visual-photo {
+    background: var(--beige);
+  }
+  .visual-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .visual-photo .discipline-visual-caption {
+    background: linear-gradient(transparent, rgba(7, 41, 43, 0.75));
+    padding: 5rem 2rem 2rem;
+    bottom: 0; left: 0; right: 0;
+  }
+  .discipline-visual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(0,0,0,0.18) 0%, transparent 60%);
+  }
+  .discipline-visual-label {
+    position: absolute;
+    top: 1.5rem; left: 1.5rem;
+    z-index: 2;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(241, 237, 224, 0.55);
+    background: rgba(18, 46, 45, 0.4);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+  }
+  .discipline-visual-circles {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    aspect-ratio: 1;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .discipline-visual-circles .pc {
+    position: absolute;
+    width: 62%; aspect-ratio: 1;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+  }
+  .discipline-visual-circles .pc-a { top: 0; left: 19%; background: var(--sage-deep); opacity: 0.55; }
+  .discipline-visual-circles .pc-b { bottom: 0; left: 0; background: var(--sage); opacity: 0.55; }
+  .discipline-visual-circles .pc-c { bottom: 0; right: 0; background: var(--sage-pale); opacity: 0.65; }
+  .discipline-visual-caption {
+    position: absolute;
+    bottom: 2rem; left: 2rem; right: 2rem;
+    z-index: 2;
+    font-family: var(--serif);
+    font-style: italic;
+    color: rgba(241, 237, 224, 0.92);
+    font-size: 1.3rem;
+    line-height: 1.35;
+  }
+
+  /* ==== CTA ==== */
+  .pilates-cta {
+    background: var(--cream-soft);
+    text-align: center;
+  }
+  .pilates-cta-inner { max-width: 680px; margin: 0 auto; }
+  .pilates-cta h2 { margin: 1.5rem 0 1.5rem; }
+  .pilates-cta-actions {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 980px) {
+    .intro-grid,
+    .discipline-grid,
+    .discipline-grid.reverse { grid-template-columns: 1fr; gap: 2.5rem; }
+    .discipline-grid.reverse .discipline-text { order: 1; }
+    .discipline-grid.reverse .discipline-visual { order: 2; }
+    .feature-list { grid-template-columns: 1fr; }
+    .machines-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ==== LA METHODE PILATES ==== */
+  .method-section { background: var(--cream); padding: clamp(4rem, 8vw, 6rem) 0; }
+  .method-principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: clamp(2.5rem, 5vw, 3.5rem) 0;
+  }
+  .principle {
+    background: var(--cream-soft);
+    border: 1px solid var(--beige);
+    border-radius: 4px;
+    padding: 1.5rem 1.75rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    transition: border-color 0.4s var(--ease), transform 0.4s var(--ease);
+  }
+  .principle:hover { border-color: var(--sage-deep); transform: translateY(-3px); }
+  .principle-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--sage-deep);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .principle h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; color: var(--teal-deep); }
+  .method-outro {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.02rem;
+    line-height: 1.85;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 760px) { .method-principles { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .method-principles { grid-template-columns: 1fr; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Pilates classique",
+  "provider": {
+    "@type":"HealthAndBeautyBusiness",
+    "name":"Move and Breathe Pilates Studio",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "19 avenue Gustave Delory",
+      "addressLocality": "Roubaix",
+      "postalCode": "59100",
+      "addressCountry": "FR"
+    }
+  },
+  "areaServed": "Lille, Roubaix, Hauts-de-France",
+  "description": "Pilates classique sur tapis et sur machines (Reformer, Cadillac, Chair, Barrel) au studio Move and Breathe à Roubaix."
+}
+</script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-mark" aria-label="Move and Breathe Pilates Studio">
+        <img src="assets/img/logo-officiel.png" alt="Move and Breathe Pilates Studio" class="logo-img">
+      </a>
+    <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+      <li><a href="le-studio.html">Le Studio</a></li>
+      <li><a href="pilates.html">Pilates</a></li>
+      <li><a href="sophrolates.html">Sophrolates</a></li>
+      <li><a href="accompagnement.html">Accompagnement holistique</a></li>
+      <li><a href="entreprises.html">Entreprises</a></li>
+      <li><a href="tarifs.html">Tarifs &amp; Planning</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-inner reveal">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Pilates</span>
+      </div>
+      <div class="eyebrow">Pratique · 01</div>
+      <h1 class="h-mega mt-2">
+        Le Pilates,<br>
+        dans son enseignement<br>
+        <em>complet</em>.
+      </h1>
+      <p class="lede mt-3">
+        Sur tapis et sur l'ensemble des machines, Reformer, Cadillac, Chair, Barrel. Un véritable studio Pilates classique, pas un studio "Reformer-only" comme on en voit beaucoup.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="reveal">
+        <div class="eyebrow">Le Pilates au studio</div>
+        <h2 class="h-2 mt-2">Un système <em>complet</em></h2>
+        <p class="intro-lede">
+          Le Pilates n'est pas un cours. C'est une méthode rigoureuse, complète, articulée autour de six principes : centrage, concentration, contrôle, précision, respiration, fluidité.
+        </p>
+        <p class="intro-text">
+          Au studio, le Pilates est enseigné dans sa rigueur classique : exercices précis, transitions maîtrisées, respiration coordonnée au mouvement. Le travail se fait aussi bien sur tapis qu'avec l'ensemble du matériel professionnel, c'est cette diversité qui permet d'avancer en profondeur.
+        </p>
+        <div class="intro-highlight">
+          <strong>Un véritable enseignement Pilates.</strong><br>Le studio propose l'ensemble des appareils, pas uniquement du Reformer comme beaucoup de salles. La méthode prend tout son sens quand on dispose du système complet.
+        </div>
+      </div>
+      <div class="intro-image reveal reveal-delay-2">
+        <div class="img-panel">
+          <img src="assets/img/pilates-cercle.jpg" alt="Cours de Pilates au studio Move and Breathe, travail avec le cercle Pilates (magic circle)" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LA METHODE PILATES -->
+<section class="method-section" id="methode">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow center">La méthode Pilates</div>
+      <h2 class="h-2 mt-2">Créée par <em>Joseph Pilates</em></h2>
+      <p class="lede mt-2">Une discipline qui vise à renforcer le corps en profondeur tout en améliorant la posture, la mobilité et la conscience corporelle. Elle repose sur six principes fondamentaux.</p>
+    </div>
+    <div class="method-principles reveal">
+      <div class="principle"><span class="principle-num">01</span><h3>La respiration</h3></div>
+      <div class="principle"><span class="principle-num">02</span><h3>La concentration</h3></div>
+      <div class="principle"><span class="principle-num">03</span><h3>Le centrage</h3></div>
+      <div class="principle"><span class="principle-num">04</span><h3>Le contrôle</h3></div>
+      <div class="principle"><span class="principle-num">05</span><h3>La précision</h3></div>
+      <div class="principle"><span class="principle-num">06</span><h3>La fluidité</h3></div>
+    </div>
+    <p class="method-outro reveal">
+      Grâce à des mouvements réalisés avec attention et qualité, le Pilates permet de développer un corps plus fort, plus équilibré et plus fonctionnel, tout en favorisant le bien-être physique et mental. Chez Move and Breathe, chaque séance est adaptée à vos besoins afin de vous aider à bouger avec plus de confort, de confiance et d'efficacité au quotidien.
+    </p>
+  </div>
+</section>
+
+<!-- PILATES SUR TAPIS -->
+<section class="discipline-block cream" id="tapis">
+  <div class="container">
+    <div class="discipline-grid">
+      <div class="discipline-text reveal">
+        <div class="discipline-num">01</div>
+        <div class="eyebrow">Pilates sur tapis</div>
+        <h2 class="h-1 mt-2">Le <em>Mat Class</em></h2>
+        <p class="discipline-lede">
+          Les fondamentaux du Pilates, sur tapis, en cours collectif ou petit groupe. La base de tout, accessible, exigeante, transformatrice.
+        </p>
+        <p>
+          Sur tapis, c'est le corps qui devient l'instrument : pas de machine pour vous aider ou vous résister, juste votre poids, votre respiration, et la précision du geste. C'est là que se construisent le centrage profond, la conscience corporelle et la qualité du mouvement.
+        </p>
+        <p>
+          Les cours collectifs réunissent <strong style="color: var(--teal); font-weight: 500;">6 personnes maximum</strong> assez pour partager la dynamique du groupe, suffisamment peu pour que je puisse corriger chacune et chacun individuellement. Plusieurs niveaux sont proposés chaque semaine : Fondamental, Débutant et Intermédiaire.
+        </p>
+        <ul class="feature-list">
+          <li>Cours collectifs en groupe de 6</li>
+          <li>3 niveaux : Fondamental, Débutant, Intermédiaire</li>
+          <li>Renforcement profond et postural</li>
+          <li>Travail de la mobilité articulaire</li>
+          <li>Conscience corporelle et respiration</li>
+          <li>Séance découverte à 15 €</li>
+        </ul>
+        <a href="tarifs.html" class="btn btn-primary btn-magnetic">Voir le planning &amp; les tarifs</a>
+      </div>
+      <div class="discipline-visual visual-photo reveal reveal-delay-2">
+        <img src="assets/img/pilates-tapis.jpg" alt="Cours collectif de Pilates sur tapis (Mat Class) au studio Move and Breathe" loading="lazy">
+        <p class="discipline-visual-caption">La base. Là où tout commence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILATES SUR MACHINES -->
+<section class="discipline-block dark" id="machines">
+  <div class="container">
+    <div class="discipline-grid reverse">
+      <div class="discipline-visual visual-photo reveal">
+        <img src="assets/img/pilates-machine.jpg" alt="Séance de Pilates sur machine avec accompagnement individualisé au studio Move and Breathe" loading="lazy">
+        <p class="discipline-visual-caption">L'ensemble du système Pilates. Pas seulement du Reformer.</p>
+      </div>
+      <div class="discipline-text reveal reveal-delay-1">
+        <div class="discipline-num">02</div>
+        <div class="eyebrow">Pilates sur machines</div>
+        <h2 class="h-1 mt-2">L'<em>équipement complet</em></h2>
+        <p class="discipline-lede">
+          Reformer, Cadillac, Chair, Barrel, l'ensemble du système Pilates. Chaque machine apporte des résistances et des angles spécifiques qui font évoluer le travail.
+        </p>
+        <p>
+          Beaucoup de studios proposent uniquement du Reformer. C'est dommage, car c'est se priver de la moitié de la méthode. Le Cadillac permet un travail suspendu et de mobilisation très précis. La Chair ajoute du défi à la stabilité. Le Barrel libère les chaînes postérieures et étire en profondeur.
+        </p>
+        <p>
+          Sur machines, je travaille essentiellement en séance individuelle ou en duo, pour ajuster précisément les ressorts, le rythme, les variations en fonction de votre corps et de votre progression.
+        </p>
+
+        <div class="machines-grid">
+          <div class="machine-card">
+            <h4>Reformer</h4>
+            <p>La pièce maîtresse, résistance par ressorts, travail debout, assis, allongé, dans toutes les directions.</p>
+          </div>
+          <div class="machine-card">
+            <h4>Cadillac</h4>
+            <p>Trapèze, ressorts, barre, un outil unique pour la mobilité, la suspension et le travail thérapeutique.</p>
+          </div>
+          <div class="machine-card">
+            <h4>Chair (Wunda Chair)</h4>
+            <p>Compacte mais redoutable, travail intense de la stabilité, du contrôle, et du gainage profond.</p>
+          </div>
+          <div class="machine-card">
+            <h4>Barrel</h4>
+            <p>Étirement, ouverture du buste, mobilité de la colonne, particulièrement précieux pour les postures fermées.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-light btn-magnetic">Réserver une séance machines</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section soft">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow center">Questions fréquentes</div>
+      <h2 class="h-2 mt-2">Vous vous <em>demandez</em>…</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Je n'ai jamais pratiqué le Pilates, puis-je commencer ?<span class="faq-q-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Oui, les séances sont adaptées à votre niveau et à vos besoins. Le débutant est le bienvenu, on construit les bases ensemble, à votre rythme.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Le Pilates est-il adapté après 50 ans ?<span class="faq-q-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Absolument. Le Pilates aide à préserver la mobilité, la force, l'équilibre et la posture à tout âge. C'est même l'une des pratiques les plus précieuses pour accompagner le corps dans la durée.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quelle est la différence entre les cours sur tapis et les séances sur Reformer ?<span class="faq-q-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Les cours sur tapis utilisent principalement le poids du corps, tandis que le Reformer apporte une résistance grâce à ses ressorts et permet un accompagnement plus individualisé.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Combien de séances faut-il pour ressentir les bénéfices ?<span class="faq-q-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Les premiers changements sont souvent perceptibles après quelques semaines de pratique régulière.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="pilates-cta">
+  <div class="container">
+    <div class="pilates-cta-inner reveal">
+      <div class="eyebrow center">Premier essai</div>
+      <h2 class="h-1">Tester le <em>Pilates</em>,<br>avant tout</h2>
+      <p class="lede">Le mieux est de commencer par une séance d'essai ou un bilan individuel, pour évaluer ce qui vous conviendra le mieux entre tapis et machines, en collectif ou en individuel.</p>
+      <div class="pilates-cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-magnetic">Prendre rendez-vous</a>
+        <a href="tarifs.html" class="btn btn-outline">
+          Voir tarifs &amp; planning
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Move <span>&amp;</span> Breathe</div>
+        <p class="footer-tagline">Studio de Pilates à Roubaix Barbieux. Approche personnalisée corps-esprit, par Coralie Delahaye.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/moveandbreathelille" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.5.9.5.5.7.9.9 1.5.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.5-.5.5-.9.7-1.5.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.5-.9-.5-.5-.7-.9-.9-1.5-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.5.5-.5.9-.7 1.5-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.6-.1 4.8-.1zm0 5.4a4.4 4.4 0 100 8.8 4.4 4.4 0 000-8.8zm0 7.2a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm5.6-7.4a1 1 0 11-2.1 0 1 1 0 012.1 0z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.4-3H14V4.6c0-.9.3-1.5 1.6-1.5H17.5V.4C17.1.3 16.1.2 15 .2 12.6.2 11 1.7 11 4.3V6H8.2v3H11v9h3V9z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3V9zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 22 10.5 22 14v7h-4v-6.2c0-1.5-.03-3.4-2.07-3.4-2.08 0-2.4 1.6-2.4 3.3V21H9V9z"/></svg>
+          </a>
+          <a href="mailto:moveandbreathelille@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Studio</div>
+        <ul class="footer-links">
+          <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+          <li><a href="qui-suis-je.html#parcours">Mon parcours</a></li>
+          <li><a href="le-studio.html">Le Studio</a></li>
+          <li><a href="le-studio.html#lieu">Le lieu</a></li>
+          <li><a href="le-studio.html#galerie">En images</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Pratiques</div>
+        <ul class="footer-links">
+          <li><a href="pilates.html">Pilates</a></li>
+          <li><a href="sophrolates.html">Sophrolates</a></li>
+          <li><a href="accompagnement.html">Accompagnement holistique</a></li>
+          <li><a href="entreprises.html">Bien-être en entreprise</a></li>
+          <li><a href="tarifs.html">Tarifs &amp; Planning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:0610234560">06 10 23 45 60</a></li>
+          <li><a href="https://www.instagram.com/moveandbreathelille" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="contact.html">19 av. Gustave Delory, Roubaix</a></li>
+          <li><a href="contact.html#access">Plan d'accès</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Move and Breathe Pilates Studio, Coralie Delahaye</span>
+      <span class="footer-credit">Site réalisé par <a href="https://mapa-developpement.fr" target="_blank" rel="noopener">Mapa Développement</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

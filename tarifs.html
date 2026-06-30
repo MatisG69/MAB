@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifs &amp; Planning 2025/2026, Move and Breathe Pilates Studio · Roubaix</title>
+<meta name="description" content="Tarifs et planning du studio Move and Breathe à Roubaix Barbieux. Mat Class dès 17€/séance, accompagnement personnalisé solo et duo, séance découverte à 15€. Cours Pilates débutant à intermédiaire, Sophrolates.">
+<meta name="keywords" content="tarif pilates Roubaix, planning pilates, prix sophrolates, cours pilates débutant Lille, séance découverte pilates">
+<link rel="canonical" href="https://moveandbreathelille.fr/tarifs.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tarifs &amp; Planning, Move and Breathe">
+<meta property="og:description" content="Planning des cours et tarifs 2025/2026 du studio Move and Breathe à Roubaix Barbieux.">
+<meta property="og:url" content="https://moveandbreathelille.fr/tarifs.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* ==== PLANNING ==== */
+  .planning-section {
+    background: var(--cream-soft);
+    padding: clamp(4rem, 8vw, 6rem) 0;
+  }
+  .planning-table {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .planning-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    border-bottom: 1px solid var(--beige);
+  }
+  .planning-row:last-child { border-bottom: none; }
+  .planning-day {
+    background: var(--cream-soft);
+    padding: 1.75rem 1.5rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--teal);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid var(--beige);
+  }
+  .planning-slots {
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    justify-content: center;
+  }
+  .planning-slot {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25rem;
+  }
+  .planning-time {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--teal);
+    min-width: 64px;
+    font-weight: 400;
+  }
+  .planning-course {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+  .planning-course .level {
+    color: var(--teal-mid);
+    font-size: 0.82rem;
+  }
+  .planning-course sup {
+    font-size: 0.65em;
+    color: var(--teal-mid);
+  }
+  .planning-footnote {
+    max-width: 880px;
+    margin: 1.5rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    font-size: 0.82rem;
+    color: var(--ink-mute);
+  }
+  .planning-footnote .group-size {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--teal);
+  }
+
+  /* Levels legend */
+  .levels-legend {
+    max-width: 880px;
+    margin: 2.5rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .level-card {
+    background: var(--cream);
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    padding: 1.15rem 1.25rem;
+  }
+  .level-card h4 {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--teal-deep);
+    margin-bottom: 0.35rem;
+  }
+  .level-card p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--ink-mute);
+  }
+
+  /* ==== PRICING SECTIONS ==== */
+  .pricing-section {
+    padding: clamp(4rem, 8vw, 6rem) 0;
+  }
+  .pricing-section.cream { background: var(--cream); }
+  .pricing-section.dark {
+    background: var(--teal-deep);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .pricing-section.dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(220, 227, 214, 0.05) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+  .pricing-section.dark .container { position: relative; z-index: 1; }
+  .pricing-section.dark .eyebrow { color: var(--sage); }
+  .pricing-section.dark .eyebrow::before { background: var(--sage); }
+  .pricing-section.dark .h-2 { color: var(--cream); }
+  .pricing-section.dark .h-2 em { color: var(--sage); }
+  .pricing-section.dark .lede { color: rgba(220, 227, 214, 0.75); }
+  .pricing-section.beige { background: var(--beige); }
+
+  .pricing-saison {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--teal-mid);
+    margin-bottom: 0.75rem;
+  }
+  .pricing-section.dark .pricing-saison { color: var(--sage); }
+
+  /* Price rows */
+  .price-rows {
+    max-width: 880px;
+    margin: 3rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .price-row {
+    background: var(--cream-soft);
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    padding: 1.6rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 2rem;
+    align-items: center;
+    transition: all 0.3s var(--ease);
+  }
+  .price-row:hover {
+    border-color: var(--sage-deep);
+    transform: translateX(4px);
+  }
+  .pricing-section.dark .price-row {
+    background: rgba(220, 227, 214, 0.05);
+    border-color: rgba(220, 227, 214, 0.12);
+  }
+  .pricing-section.dark .price-row:hover {
+    border-color: var(--sage);
+    background: rgba(220, 227, 214, 0.08);
+  }
+  .price-row-name {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--teal-deep);
+    line-height: 1.25;
+  }
+  .pricing-section.dark .price-row-name { color: var(--cream); }
+  .price-row-detail {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--ink-mute);
+    margin-top: 0.3rem;
+    font-weight: 300;
+  }
+  .pricing-section.dark .price-row-detail { color: rgba(220, 227, 214, 0.55); }
+  .price-row-unit {
+    font-size: 0.82rem;
+    color: var(--teal-mid);
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 300;
+  }
+  .pricing-section.dark .price-row-unit { color: var(--sage); }
+  .price-row-total {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.85rem;
+    color: var(--teal);
+    font-weight: 400;
+    text-align: right;
+    white-space: nowrap;
+    min-width: 110px;
+  }
+  .pricing-section.dark .price-row-total { color: var(--sage-pale); }
+
+  /* Discovery banner */
+  .discovery-banner {
+    max-width: 880px;
+    margin: 2rem auto 0;
+    background: var(--teal-soft);
+    border: 1px solid var(--sage-deep);
+    border-radius: 2px;
+    padding: 1.4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .pricing-section.dark .discovery-banner {
+    background: rgba(191, 213, 207, 0.12);
+    border-color: var(--sage);
+  }
+  .discovery-banner-label {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--teal-deep);
+    font-weight: 500;
+  }
+  .pricing-section.dark .discovery-banner-label { color: var(--cream); }
+  .discovery-banner-label .sub {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    color: var(--ink-mute);
+    font-weight: 300;
+    margin-top: 0.25rem;
+  }
+  .pricing-section.dark .discovery-banner-label .sub { color: rgba(220, 227, 214, 0.6); }
+  .discovery-banner-price {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--teal);
+    font-weight: 400;
+    white-space: nowrap;
+  }
+  .pricing-section.dark .discovery-banner-price { color: var(--sage); }
+
+  /* Note */
+  .pricing-note {
+    max-width: 880px;
+    margin: 1.5rem auto 0;
+    font-size: 0.82rem;
+    color: var(--ink-mute);
+    line-height: 1.6;
+    text-align: center;
+  }
+  .pricing-section.dark .pricing-note { color: rgba(220, 227, 214, 0.5); }
+  .pricing-note strong { color: var(--teal-mid); font-weight: 400; }
+  .pricing-section.dark .pricing-note strong { color: var(--sage); }
+
+  /* Petite note d'annulation sous chaque catégorie */
+  .cancel-note {
+    max-width: 880px;
+    margin: 1.25rem auto 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--ink-mute);
+    letter-spacing: 0.01em;
+  }
+  .pricing-section.dark .cancel-note { color: rgba(220, 227, 214, 0.6); }
+  .cancel-note svg { width: 15px; height: 15px; flex-shrink: 0; stroke: var(--teal); }
+  .pricing-section.dark .cancel-note svg { stroke: var(--sage); }
+  .pay-note {
+    max-width: 880px;
+    margin: 0.6rem auto 0;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--ink-mute);
+    font-family: var(--serif);
+  }
+  .pricing-section.dark .pay-note { color: rgba(220, 227, 214, 0.6); }
+
+  /* ==== CANCELLATION POLICY ==== */
+  .policy-strip {
+    background: var(--cream-deep, var(--beige));
+    background: var(--beige);
+    padding: clamp(2.5rem, 5vw, 4rem) 0;
+    text-align: center;
+  }
+  .policy-strip p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+    color: var(--teal-deep);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* ==== CTA ==== */
+  .tarifs-cta {
+    background: var(--cream);
+    text-align: center;
+  }
+  .tarifs-cta-inner { max-width: 680px; margin: 0 auto; }
+  .tarifs-cta h2 { margin: 1.5rem 0 1.5rem; }
+  .tarifs-cta-actions {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 980px) {
+    .planning-row { grid-template-columns: 110px 1fr; }
+    .planning-day { padding: 1.25rem 1rem; font-size: 0.66rem; }
+    .planning-slots { padding: 1rem 1.25rem; }
+    .levels-legend { grid-template-columns: repeat(2, 1fr); }
+    .price-row {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      text-align: left;
+    }
+    .price-row-unit, .price-row-total { text-align: left; }
+    .price-row-total { min-width: 0; }
+    .discovery-banner { flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 480px) {
+    .levels-legend { grid-template-columns: 1fr; }
+    .planning-row { grid-template-columns: 92px 1fr; }
+    .planning-day { padding: 1rem 0.75rem; letter-spacing: 0.12em; }
+    .planning-time { font-size: 1.05rem; min-width: 52px; }
+    .price-row { padding: 1.3rem 1.4rem; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Cours de Pilates et Sophrolates",
+  "provider": {
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Move and Breathe Pilates Studio",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "19 avenue Gustave Delory",
+      "addressLocality": "Roubaix",
+      "postalCode": "59100",
+      "addressCountry": "FR"
+    }
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Tarifs 2025/2026",
+    "itemListElement": [
+      {"@type": "Offer", "name": "Mat Class, cours à l'unité", "price": "24", "priceCurrency": "EUR"},
+      {"@type": "Offer", "name": "Mat Class, forfait 10 cours", "price": "210", "priceCurrency": "EUR"},
+      {"@type": "Offer", "name": "Mat Class, forfait 20 cours", "price": "380", "priceCurrency": "EUR"},
+      {"@type": "Offer", "name": "Mat Class, forfait 40 cours", "price": "680", "priceCurrency": "EUR"},
+      {"@type": "Offer", "name": "Accompagnement personnalisé, séance à l'unité", "price": "60", "priceCurrency": "EUR"},
+      {"@type": "Offer", "name": "Accompagnement duo, séance à l'unité", "price": "40", "priceCurrency": "EUR"}
+    ]
+  }
+}
+</script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-mark" aria-label="Move and Breathe Pilates Studio">
+        <img src="assets/img/logo-officiel.png" alt="Move and Breathe Pilates Studio" class="logo-img">
+      </a>
+    <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+      <li><a href="le-studio.html">Le Studio</a></li>
+      <li><a href="pilates.html">Pilates</a></li>
+      <li><a href="sophrolates.html">Sophrolates</a></li>
+      <li><a href="accompagnement.html">Accompagnement holistique</a></li>
+      <li><a href="entreprises.html">Entreprises</a></li>
+      <li><a href="tarifs.html">Tarifs &amp; Planning</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-inner reveal">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Tarifs &amp; Planning</span>
+      </div>
+      <div class="eyebrow">Saison 2025 / 2026</div>
+      <h1 class="h-mega mt-2">
+        Tarifs<br>
+        <em>&amp; planning</em>.
+      </h1>
+      <p class="lede mt-3">
+        Cours collectifs en groupe de 6, accompagnement personnalisé en solo ou en duo, tous les formats, tous les tarifs, et le planning de la semaine.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- PLANNING -->
+<section class="planning-section" id="planning">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow center">Planning · Mat Class</div>
+      <h2 class="h-2 mt-2">Les cours collectifs<br>de la <em>semaine</em></h2>
+      <p class="lede mt-2">Groupe de 6 personnes, pour que chacune dispose de la place et de l'attention nécessaires.</p>
+    </div>
+
+    <div class="planning-table reveal">
+      <div class="planning-row">
+        <div class="planning-day">Lundi</div>
+        <div class="planning-slots">
+          <div class="planning-slot">
+            <span class="planning-time">15h</span>
+            <span class="planning-course">Pilates <span class="level">Silver</span></span>
+          </div>
+          <div class="planning-slot">
+            <span class="planning-time">19h</span>
+            <span class="planning-course">Pilates / Stretch</span>
+          </div>
+        </div>
+      </div>
+      <div class="planning-row">
+        <div class="planning-day">Mardi</div>
+        <div class="planning-slots">
+          <div class="planning-slot">
+            <span class="planning-time">18h30</span>
+            <span class="planning-course">Sophrolates <sup>©</sup></span>
+          </div>
+          <div class="planning-slot">
+            <span class="planning-time">19h30</span>
+            <span class="planning-course">Pilates <span class="level">Intermédiaire</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="planning-row">
+        <div class="planning-day">Mercredi</div>
+        <div class="planning-slots">
+          <div class="planning-slot">
+            <span class="planning-time">18h</span>
+            <span class="planning-course">L'Atelier du dos</span>
+          </div>
+          <div class="planning-slot">
+            <span class="planning-time">19h</span>
+            <span class="planning-course">Sophrolates <sup>©</sup></span>
+          </div>
+        </div>
+      </div>
+      <div class="planning-row">
+        <div class="planning-day">Jeudi</div>
+        <div class="planning-slots">
+          <div class="planning-slot">
+            <span class="planning-time">18h</span>
+            <span class="planning-course">Pilates <span class="level">Fondamental</span></span>
+          </div>
+          <div class="planning-slot">
+            <span class="planning-time">19h</span>
+            <span class="planning-course">Pilates <span class="level">Débutant</span></span>
+          </div>
+        </div>
+      </div>
+      <div class="planning-row">
+        <div class="planning-day">Samedi</div>
+        <div class="planning-slots">
+          <div class="planning-slot">
+            <span class="planning-time">10h</span>
+            <span class="planning-course">Pilates <span class="level">Fondamental</span></span>
+          </div>
+          <div class="planning-slot">
+            <span class="planning-time">11h</span>
+            <span class="planning-course">Pilates <span class="level">Débutant</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="levels-legend reveal reveal-delay-1">
+      <div class="level-card">
+        <h4>Fondamental</h4>
+        <p>Les fondamentaux : posture, respiration, premiers exercices. Idéal pour démarrer.</p>
+      </div>
+      <div class="level-card">
+        <h4>Débutant</h4>
+        <p>Pour consolider les bases et enrichir progressivement le répertoire.</p>
+      </div>
+      <div class="level-card">
+        <h4>Intermédiaire</h4>
+        <p>Enchaînements plus exigeants, travail en profondeur, rythme soutenu.</p>
+      </div>
+      <div class="level-card">
+        <h4>Pilates Silver</h4>
+        <p>Bien vieillir en mouvement : un cours adapté pour entretenir la mobilité, la force et la souplesse.</p>
+      </div>
+      <div class="level-card">
+        <h4>L'Atelier du dos</h4>
+        <p>Pour un dos plus libre, une meilleure posture et un corps plus équilibré.</p>
+      </div>
+      <div class="level-card">
+        <h4>Pilates / Stretch</h4>
+        <p>Renforcement et étirements combinés, mobilité et relâchement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS MAT CLASS -->
+<section class="pricing-section cream" id="mat-class">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow center">Tarifs · Mat Class</div>
+      <h2 class="h-2 mt-2">Les cours collectifs<br><em>sur tapis</em></h2>
+      <p class="lede mt-2">Plus vous vous engagez dans la régularité, plus le tarif par séance diminue, parce que c'est la régularité qui transforme.</p>
+    </div>
+
+    <div class="price-rows">
+      <div class="price-row reveal">
+        <div>
+          <div class="price-row-name">Cours à l'unité</div>
+        </div>
+        <div class="price-row-unit"></div>
+        <div class="price-row-total">24 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-1">
+        <div>
+          <div class="price-row-name">Forfait 10 cours</div>
+        </div>
+        <div class="price-row-unit">soit 21 € / séance</div>
+        <div class="price-row-total">210 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-1">
+        <div>
+          <div class="price-row-name">Forfait 10 cours · Étudiant</div>
+        </div>
+        <div class="price-row-unit">−15 % · soit 17,85 € / séance</div>
+        <div class="price-row-total">178,50 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-2">
+        <div>
+          <div class="price-row-name">Forfait 20 cours</div>
+        </div>
+        <div class="price-row-unit">soit 19 € / séance</div>
+        <div class="price-row-total">380 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-3">
+        <div>
+          <div class="price-row-name">Forfait 40 cours</div>
+        </div>
+        <div class="price-row-unit">soit 17 € / séance</div>
+        <div class="price-row-total">680 €</div>
+      </div>
+    </div>
+
+    <div class="discovery-banner reveal">
+      <div class="discovery-banner-label">
+        Séance découverte
+        <span class="sub">Valable une fois, pour essayer avant de s'engager</span>
+      </div>
+      <div class="discovery-banner-price">15 €</div>
+    </div>
+
+    <p class="pay-note reveal">Possibilité de régler en plusieurs fois sur demande.</p>
+
+    <div class="cancel-note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <span>Toute séance non annulée 48h à l'avance sera dûe.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOMPAGNEMENT PERSONNALISÉ -->
+<section class="pricing-section dark" id="accompagnement-solo">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="pricing-saison" style="text-align: center;">Saison 2025 / 2026</div>
+      <div class="eyebrow center">Accompagnement personnalisé</div>
+      <h2 class="h-2 mt-2">Le travail <em>en solo</em>,<br>entièrement sur mesure</h2>
+      <p class="lede mt-2">Séances individuelles construites autour de votre bilan, sur tapis et sur l'ensemble des machines.</p>
+    </div>
+
+    <div class="price-rows">
+      <div class="price-row reveal">
+        <div>
+          <div class="price-row-name">Cours à l'unité</div>
+        </div>
+        <div class="price-row-unit"></div>
+        <div class="price-row-total">60 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-1">
+        <div>
+          <div class="price-row-name">10 séances accompagnées</div>
+        </div>
+        <div class="price-row-unit">soit 52 € / séance</div>
+        <div class="price-row-total">520 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-2">
+        <div>
+          <div class="price-row-name">20 séances accompagnées</div>
+        </div>
+        <div class="price-row-unit">soit 49 € / séance</div>
+        <div class="price-row-total">980 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-3">
+        <div>
+          <div class="price-row-name">Accompagnement annuel</div>
+          <div class="price-row-detail">40 séances sur l'année</div>
+        </div>
+        <div class="price-row-unit">soit 46 € / séance</div>
+        <div class="price-row-total">1 840 €</div>
+      </div>
+    </div>
+
+    <div class="discovery-banner reveal">
+      <div class="discovery-banner-label">
+        Séance Bilan / Découverte
+        <span class="sub">Valable une fois, bilan postural, respiratoire et de mobilité inclus</span>
+      </div>
+      <div class="discovery-banner-price">45 €</div>
+    </div>
+
+    <div class="cancel-note reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <span>Toute séance non annulée 48h à l'avance sera dûe.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOMPAGNEMENT DUO -->
+<section class="pricing-section cream" id="accompagnement-duo">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="pricing-saison" style="text-align: center;">Saison 2025 / 2026</div>
+      <div class="eyebrow center">Accompagnement duo</div>
+      <h2 class="h-2 mt-2">À deux,<br>même <em>exigence</em></h2>
+      <p class="lede mt-2">Le même accompagnement sur mesure, à partager en binôme, entre amies, en couple, en famille. Tarifs par personne.</p>
+    </div>
+
+    <div class="price-rows">
+      <div class="price-row reveal">
+        <div>
+          <div class="price-row-name">Cours à l'unité</div>
+        </div>
+        <div class="price-row-unit">par personne</div>
+        <div class="price-row-total">40 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-1">
+        <div>
+          <div class="price-row-name">10 séances accompagnées</div>
+        </div>
+        <div class="price-row-unit">soit 36 € / séance / pers.</div>
+        <div class="price-row-total">360 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-2">
+        <div>
+          <div class="price-row-name">20 séances accompagnées</div>
+        </div>
+        <div class="price-row-unit">soit 33 € / séance / pers.</div>
+        <div class="price-row-total">660 €</div>
+      </div>
+      <div class="price-row reveal reveal-delay-3">
+        <div>
+          <div class="price-row-name">Accompagnement annuel</div>
+          <div class="price-row-detail">40 séances sur l'année</div>
+        </div>
+        <div class="price-row-unit">soit 30 € / séance / pers.</div>
+        <div class="price-row-total">1 200 €</div>
+      </div>
+    </div>
+
+    <div class="discovery-banner reveal">
+      <div class="discovery-banner-label">
+        Séance découverte
+        <span class="sub">Valable une fois, par personne</span>
+      </div>
+      <div class="discovery-banner-price">30 €</div>
+    </div>
+
+    <p class="pricing-note reveal">
+      <strong>À noter :</strong> en cas d'absence de l'un des deux élèves, le tarif solo s'applique pour la séance.
+    </p>
+
+    <div class="cancel-note reveal" style="justify-content: center;">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <span>Toute séance non annulée 48h à l'avance sera dûe.</span>
+    </div>
+  </div>
+</section>
+
+<!-- POLICY -->
+<section class="policy-strip">
+  <div class="container">
+    <p class="reveal">Toute séance non annulée 48 heures à l'avance sera dûe, par respect pour le travail de préparation et pour les élèves en attente d'un créneau.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="tarifs-cta">
+  <div class="container">
+    <div class="tarifs-cta-inner reveal">
+      <div class="eyebrow center">Démarrer</div>
+      <h2 class="h-1">Commencez par une<br><em>séance découverte</em></h2>
+      <p class="lede">Mat Class à 15 €, bilan individuel à 45 €, duo à 30 € par personne, le meilleur moyen de savoir si le studio vous correspond, sans engagement.</p>
+      <div class="tarifs-cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-magnetic">Réserver ma séance découverte</a>
+        <a href="tel:0610234560" class="btn btn-outline">
+          06 10 23 45 60
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Move <span>&amp;</span> Breathe</div>
+        <p class="footer-tagline">Studio de Pilates à Roubaix Barbieux. Approche personnalisée corps-esprit, par Coralie Delahaye.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/moveandbreathelille" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.5.9.5.5.7.9.9 1.5.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.5-.5.5-.9.7-1.5.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.5-.9-.5-.5-.7-.9-.9-1.5-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.5.5-.5.9-.7 1.5-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.6-.1 4.8-.1zm0 5.4a4.4 4.4 0 100 8.8 4.4 4.4 0 000-8.8zm0 7.2a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm5.6-7.4a1 1 0 11-2.1 0 1 1 0 012.1 0z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.4-3H14V4.6c0-.9.3-1.5 1.6-1.5H17.5V.4C17.1.3 16.1.2 15 .2 12.6.2 11 1.7 11 4.3V6H8.2v3H11v9h3V9z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3V9zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 22 10.5 22 14v7h-4v-6.2c0-1.5-.03-3.4-2.07-3.4-2.08 0-2.4 1.6-2.4 3.3V21H9V9z"/></svg>
+          </a>
+          <a href="mailto:moveandbreathelille@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Studio</div>
+        <ul class="footer-links">
+          <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+          <li><a href="qui-suis-je.html#parcours">Mon parcours</a></li>
+          <li><a href="le-studio.html">Le Studio</a></li>
+          <li><a href="le-studio.html#lieu">Le lieu</a></li>
+          <li><a href="le-studio.html#galerie">En images</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Pratiques</div>
+        <ul class="footer-links">
+          <li><a href="pilates.html">Pilates</a></li>
+          <li><a href="sophrolates.html">Sophrolates</a></li>
+          <li><a href="accompagnement.html">Accompagnement holistique</a></li>
+          <li><a href="entreprises.html">Bien-être en entreprise</a></li>
+          <li><a href="tarifs.html">Tarifs &amp; Planning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:0610234560">06 10 23 45 60</a></li>
+          <li><a href="https://www.instagram.com/moveandbreathelille" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="contact.html">19 av. Gustave Delory, Roubaix</a></li>
+          <li><a href="contact.html#access">Plan d'accès</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Move and Breathe Pilates Studio, Coralie Delahaye</span>
+      <span class="footer-credit">Site réalisé par <a href="https://mapa-developpement.fr" target="_blank" rel="noopener">Mapa Développement</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

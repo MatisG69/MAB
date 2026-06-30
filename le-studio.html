@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Studio, Coralie Delahaye · Move and Breathe Pilates Studio</title>
+<meta name="description" content="Le studio Move and Breathe à Roubaix Barbieux. L'histoire de Coralie Delahaye, son parcours, sa philosophie : Pilates classique, méthode De Gasquet, Sophrolates, sophrologie. Approche personnalisée corps-esprit.">
+<meta name="keywords" content="Coralie Delahaye, professeur pilates Lille, sophrologue Roubaix, parcours, formation pilates, méthode De Gasquet">
+<link rel="canonical" href="https://moveandbreathelille.fr/le-studio.html">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Le Studio, Coralie Delahaye · Move and Breathe">
+<meta property="og:description" content="L'histoire et la philosophie du studio Move and Breathe à Roubaix Barbieux.">
+<meta property="og:url" content="https://moveandbreathelille.fr/le-studio.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* ==== PORTRAIT ==== */
+  .portrait {
+    background: var(--cream-soft);
+    padding: clamp(4rem, 8vw, 7rem) 0;
+  }
+  .portrait-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+  }
+  .portrait-image {
+    position: sticky;
+    top: 6rem;
+    aspect-ratio: 3/4;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .portrait-image .img-panel-placeholder {
+    background: linear-gradient(165deg, var(--teal-deep) 0%, var(--teal) 60%, var(--teal-mid) 100%);
+  }
+  .portrait-text .h-2 { margin-bottom: 2rem; margin-top: 1.25rem; }
+  .portrait-paragraph {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    margin-bottom: 1.5rem;
+  }
+  .portrait-paragraph.lede {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.3rem;
+    line-height: 1.55;
+    color: var(--teal-deep);
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+  .portrait-quote {
+    margin: 3rem 0;
+    padding: 2rem 0 2rem 2rem;
+    border-left: 2px solid var(--sage-deep);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--teal);
+  }
+  .portrait-highlight {
+    background: var(--cream);
+    padding: 1.5rem 1.75rem;
+    border-radius: 2px;
+    border-left: 3px solid var(--sage-deep);
+    margin: 2rem 0;
+    font-size: 0.96rem;
+    line-height: 1.75;
+    color: var(--teal-deep);
+  }
+  .portrait-highlight strong { color: var(--teal); font-weight: 500; }
+
+  /* ==== PHILOSOPHIE ==== */
+  .philosophy {
+    background: var(--teal-deep);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .philosophy::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(220, 227, 214, 0.05) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+  .philosophy-circles-bg {
+    position: absolute;
+    top: 50%; left: -150px;
+    transform: translateY(-50%);
+    width: 500px; height: 500px;
+    background:
+      radial-gradient(circle at 50% 30%, var(--sage-deep) 0%, transparent 24%),
+      radial-gradient(circle at 32% 65%, var(--sage) 0%, transparent 24%),
+      radial-gradient(circle at 68% 65%, var(--sage-pale) 0%, transparent 24%);
+    opacity: 0.12;
+    pointer-events: none;
+  }
+  .philosophy .container { position: relative; z-index: 1; }
+  .philosophy .eyebrow { color: var(--sage); }
+  .philosophy .eyebrow::before { background: var(--sage); }
+  .philosophy h2 { color: var(--cream); margin: 1.5rem 0 2.5rem; }
+  .philosophy h2 em { color: var(--sage); }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  .value-card {
+    padding: 2rem 0;
+    border-top: 1px solid rgba(220, 227, 214, 0.15);
+  }
+  .value-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 2.5rem;
+    color: var(--sage);
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+  .value-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+  }
+  .value-text {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: rgba(220, 227, 214, 0.7);
+  }
+
+  /* ==== PARCOURS / TIMELINE ==== */
+  .parcours { background: var(--cream); position: relative; }
+  .parcours-list {
+    max-width: 920px;
+    margin: 0 auto;
+    list-style: none;
+    position: relative;
+    padding-left: 3rem;
+  }
+  .parcours-list::before {
+    content: '';
+    position: absolute;
+    left: 0.7rem; top: 1rem; bottom: 1rem;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--sage-deep) 10%, var(--sage-deep) 90%, transparent);
+  }
+  .parcours-item {
+    position: relative;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--beige);
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  .parcours-item:last-child { border-bottom: none; }
+  .parcours-item::before {
+    content: '';
+    position: absolute;
+    left: -2.92rem;
+    top: 2.6rem;
+    width: 15px; height: 15px;
+    background: var(--cream);
+    border: 2px solid var(--teal);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .parcours-year {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--teal);
+    line-height: 1;
+    padding-top: 0.25rem;
+  }
+  .parcours-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--teal-deep);
+    margin-bottom: 0.4rem;
+    line-height: 1.25;
+  }
+  .parcours-desc {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+  .parcours-tag {
+    display: inline-block;
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--teal-mid);
+    margin-top: 0.6rem;
+  }
+
+  /* ==== STUDIO PHYSIQUE ==== */
+  .studio-physical { background: var(--cream-soft); }
+  .studio-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: clamp(3rem, 6vw, 6rem);
+    align-items: center;
+  }
+  .studio-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--beige-deep);
+  }
+  .studio-feature h4 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--teal-deep);
+    margin-bottom: 0.5rem;
+  }
+  .studio-feature p {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+  }
+  .studio-image {
+    aspect-ratio: 4/5;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .studio-image .img-panel-placeholder {
+    background: linear-gradient(155deg, var(--beige-deep), var(--sage-deep) 60%, var(--sage));
+  }
+
+  /* ==== CTA ==== */
+  .studio-cta {
+    background: var(--beige);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .studio-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(30, 72, 71, 0.1) 1px, transparent 0);
+    background-size: 36px 36px;
+    opacity: 0.5;
+  }
+  .studio-cta .container { position: relative; z-index: 1; }
+  .studio-cta-inner { max-width: 680px; margin: 0 auto; }
+  .studio-cta h2 { margin: 1.5rem 0 1.5rem; }
+  .studio-cta-actions {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  /* ==== GALERIE ==== */
+  .studio-gallery { background: var(--cream); }
+  .gallery-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+  }
+  .gallery-card { margin: 0; }
+  .gallery-media {
+    aspect-ratio: 4/5;
+    position: relative;
+  }
+  .gallery-media img { transition: transform 0.8s var(--ease); }
+  .gallery-card:hover .gallery-media img { transform: scale(1.04); }
+  .gallery-tag {
+    position: absolute;
+    top: 1.25rem; left: 1.25rem;
+    z-index: 2;
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: rgba(12, 85, 91, 0.55);
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+  }
+  .gallery-caption { padding: 1.5rem 0.25rem 0; }
+  .gallery-caption h3 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--teal-deep);
+    margin-bottom: 0.5rem;
+  }
+  .gallery-caption p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+  .gallery-ambiance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(1rem, 2vw, 1.5rem);
+    margin-top: 1.75rem;
+  }
+  .gallery-item {
+    display: block;
+    cursor: zoom-in;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  .gallery-item .img-panel { aspect-ratio: 3/4; }
+  .gallery-item img { transition: transform 0.8s var(--ease); }
+  .gallery-item:hover img { transform: scale(1.05); }
+
+  /* ==== LIGHTBOX ==== */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(8, 32, 33, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1.5rem, 5vw, 4rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s var(--ease), visibility 0.35s var(--ease);
+  }
+  .lightbox.is-open { opacity: 1; visibility: visible; }
+  .lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    transform: scale(0.96);
+    transition: transform 0.35s var(--ease);
+  }
+  .lightbox.is-open img { transform: scale(1); }
+  .lightbox-close {
+    position: absolute;
+    top: 1.5rem; right: 1.75rem;
+    background: none;
+    border: none;
+    color: var(--cream);
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 0.3s var(--ease);
+  }
+  .lightbox-close:hover { opacity: 1; }
+
+  @media (max-width: 980px) {
+    .portrait-grid, .studio-grid { grid-template-columns: 1fr; }
+    .gallery-feature { grid-template-columns: 1fr; }
+    .gallery-ambiance { grid-template-columns: 1fr 1fr; }
+    .portrait-image { position: relative; top: 0; max-width: 460px; margin: 0 auto; }
+    .values-grid { grid-template-columns: 1fr; gap: 0; }
+    .value-card { padding: 1.75rem 0; }
+    .studio-features { grid-template-columns: 1fr; }
+    .parcours-list { padding-left: 2rem; }
+    .parcours-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .parcours-year { font-size: 1.2rem; }
+    .parcours-item::before { left: -1.92rem; top: 1.9rem; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Coralie Delahaye",
+  "jobTitle": "Instructrice Pilates & Sophrologue",
+  "worksFor": {"@type":"Organization","name":"Move and Breathe Pilates Studio"},
+  "url": "https://moveandbreathelille.fr/le-studio.html",
+  "hasCredential": [
+    {"@type":"EducationalOccupationalCredential","name":"Pilates classique, formation longue 900h"},
+    {"@type":"EducationalOccupationalCredential","name":"Sophrolates"},
+    {"@type":"EducationalOccupationalCredential","name":"Méthode Bernadette De Gasquet"},
+    {"@type":"EducationalOccupationalCredential","name":"Sophrologie"}
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-mark" aria-label="Move and Breathe Pilates Studio">
+        <img src="assets/img/logo-officiel.png" alt="Move and Breathe Pilates Studio" class="logo-img">
+      </a>
+    <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+      <li><a href="le-studio.html">Le Studio</a></li>
+      <li><a href="pilates.html">Pilates</a></li>
+      <li><a href="sophrolates.html">Sophrolates</a></li>
+      <li><a href="accompagnement.html">Accompagnement holistique</a></li>
+      <li><a href="entreprises.html">Entreprises</a></li>
+      <li><a href="tarifs.html">Tarifs &amp; Planning</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-inner reveal">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Le Studio</span>
+      </div>
+      <div class="eyebrow">Le lieu</div>
+      <h1 class="h-mega mt-2">
+        Un lieu où l'on<br>
+        prend le <em>temps</em>.
+      </h1>
+      <p class="lede mt-3">
+        Move and Breathe est un studio de Pilates où le mouvement et la respiration ont toute leur place, pour vous accompagner vers un corps plus fort, plus mobile, plus équilibré.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- STUDIO PHYSIQUE -->
+<section class="studio-physical" id="lieu">
+  <div class="container">
+    <div class="studio-grid">
+      <div class="reveal">
+        <div class="eyebrow">Le lieu</div>
+        <h2 class="h-2 mt-2">Un studio pensé<br>pour le <em>travail juste</em></h2>
+        <p class="body-text mt-3">
+          Le studio est situé à Roubaix Barbieux, à 100 mètres du Parc, dans un quartier calme et résidentiel. L'espace a été conçu pour que chaque élève dispose de la place et du matériel professionnel nécessaires, du Reformer au Cadillac, en passant par la Wunda Chair et la Ladder Barrel.
+        </p>
+        <ul class="studio-features">
+          <li class="studio-feature">
+            <h4>Matériel professionnel complet</h4>
+            <p>Reformer, Cadillac, Wunda Chair, Ladder Barrel, l'équipement complet d'un véritable studio Pilates classique.</p>
+          </li>
+          <li class="studio-feature">
+            <h4>Petits effectifs</h4>
+            <p>Cours collectifs en groupe de 6 personnes. Possibilité de séances individuelles ou en duo pour un accompagnement encore plus précis.</p>
+          </li>
+          <li class="studio-feature">
+            <h4>Accès facile</h4>
+            <p>Métro 2 Croix Mairie, Tram Parc Barbieux, parking gratuit. À 100m du Parc Barbieux.</p>
+          </li>
+          <li class="studio-feature">
+            <h4>Une atmosphère apaisée</h4>
+            <p>Un cadre lumineux, propre, propice à la concentration et au lâcher-prise. Pour vraiment prendre le temps.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="studio-image reveal reveal-delay-2">
+        <div class="img-panel">
+          <img src="assets/img/studio-ensemble.jpg" alt="Le studio Move and Breathe à Roubaix Barbieux : parquet, lumière naturelle, tapis et petit matériel" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIE -->
+<section class="studio-gallery" id="galerie">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow center">En images</div>
+      <h2 class="h-2 mt-2">Le studio <em>en images</em></h2>
+      <p class="lede mt-2">Deux espaces complémentaires et une atmosphère pensée pour prendre le temps. Bienvenue chez Move and Breathe.</p>
+    </div>
+
+    <div class="gallery-feature">
+      <figure class="gallery-card reveal">
+        <div class="img-panel gallery-media">
+          <img src="assets/img/studio-tapis-salle.jpg" alt="L'espace Tapis du studio Move and Breathe : tapis AIREX alignés sur le parquet, affiche Move and Breathe et lumière douce" loading="lazy">
+          <span class="gallery-tag">Espace Tapis</span>
+        </div>
+        <figcaption class="gallery-caption">
+          <h3>L'espace Tapis</h3>
+          <p>Cours collectifs en petit groupe (6 personnes max), petit matériel et lumière naturelle, pour un travail au sol précis et apaisé.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery-card reveal reveal-delay-1">
+        <div class="img-panel gallery-media">
+          <img src="assets/img/studio-machines-reformers.jpg" alt="L'espace Machines du studio Move and Breathe : Reformers alignés devant la fenêtre, miroir et affiche We Love Pilates" loading="lazy">
+          <span class="gallery-tag">Espace Machines</span>
+        </div>
+        <figcaption class="gallery-caption">
+          <h3>L'espace Machines</h3>
+          <p>Le matériel complet du Pilates classique : Reformer, Cadillac, Wunda Chair et Ladder Barrel, pour un accompagnement individualisé.</p>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="eyebrow center reveal" style="margin-top: clamp(3rem, 6vw, 5rem);">L'ambiance</div>
+    <div class="gallery-ambiance">
+      <a class="gallery-item reveal" href="assets/img/studio-tapis-fenetre.jpg" data-lightbox>
+        <div class="img-panel"><img src="assets/img/studio-tapis-fenetre.jpg" alt="Porte-fenêtre du studio donnant sur les arbres, voilage et plantes suspendues" loading="lazy"></div>
+      </a>
+      <a class="gallery-item reveal reveal-delay-1" href="assets/img/studio-cours-groupe.jpg" data-lightbox>
+        <div class="img-panel"><img src="assets/img/studio-cours-groupe.jpg" alt="Cours collectif de Pilates en petit groupe sur tapis au studio Move and Breathe" loading="lazy"></div>
+      </a>
+      <a class="gallery-item reveal reveal-delay-2" href="assets/img/studio-ambiance-cercle.jpg" data-lightbox>
+        <div class="img-panel"><img src="assets/img/studio-ambiance-cercle.jpg" alt="Détail d'ambiance : cercle Pilates et chaussons de danse sur un radiateur ancien, colonne vertébrale anatomique" loading="lazy"></div>
+      </a>
+      <a class="gallery-item reveal" href="assets/img/studio-machines-barrel.jpg" data-lightbox>
+        <div class="img-panel"><img src="assets/img/studio-machines-barrel.jpg" alt="Matériel Pilates en bois clair : Ladder Barrel et échelle (cage) du studio" loading="lazy"></div>
+      </a>
+      <a class="gallery-item reveal reveal-delay-1" href="assets/img/studio-ambiance-etagere.jpg" data-lightbox>
+        <div class="img-panel"><img src="assets/img/studio-ambiance-etagere.jpg" alt="Coin lecture et rangement du studio : livres, plantes et petit matériel" loading="lazy"></div>
+      </a>
+      <a class="gallery-item reveal reveal-delay-2" href="assets/img/studio-tapis-sol.jpg" data-lightbox>
+        <div class="img-panel"><img src="assets/img/studio-tapis-sol.jpg" alt="Gros plan sur un tapis Pilates au sol, dans la lumière du studio sur parquet" loading="lazy"></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Fermer">&times;</button>
+    <img src="" alt="" id="lightbox-img">
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="studio-cta">
+  <div class="container">
+    <div class="studio-cta-inner reveal">
+      <div class="eyebrow center">Premier contact</div>
+      <h2 class="h-1">On en <em>parle</em> ?</h2>
+      <p class="lede">Pour démarrer, rien ne remplace un premier échange, au téléphone ou par message. Quelques minutes suffisent pour cerner vos besoins et trouver le bon format.</p>
+      <div class="studio-cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-magnetic">Prendre contact</a>
+        <a href="pilates.html" class="btn btn-outline">
+          Voir les pratiques
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Move <span>&amp;</span> Breathe</div>
+        <p class="footer-tagline">Studio de Pilates à Roubaix Barbieux. Approche personnalisée corps-esprit, par Coralie Delahaye.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/moveandbreathelille" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.5.9.5.5.7.9.9 1.5.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.5-.5.5-.9.7-1.5.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.5-.9-.5-.5-.7-.9-.9-1.5-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.5.5-.5.9-.7 1.5-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.6-.1 4.8-.1zm0 5.4a4.4 4.4 0 100 8.8 4.4 4.4 0 000-8.8zm0 7.2a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm5.6-7.4a1 1 0 11-2.1 0 1 1 0 012.1 0z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.4-3H14V4.6c0-.9.3-1.5 1.6-1.5H17.5V.4C17.1.3 16.1.2 15 .2 12.6.2 11 1.7 11 4.3V6H8.2v3H11v9h3V9z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3V9zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 22 10.5 22 14v7h-4v-6.2c0-1.5-.03-3.4-2.07-3.4-2.08 0-2.4 1.6-2.4 3.3V21H9V9z"/></svg>
+          </a>
+          <a href="mailto:moveandbreathelille@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Studio</div>
+        <ul class="footer-links">
+          <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+          <li><a href="qui-suis-je.html#parcours">Mon parcours</a></li>
+          <li><a href="le-studio.html">Le Studio</a></li>
+          <li><a href="le-studio.html#lieu">Le lieu</a></li>
+          <li><a href="le-studio.html#galerie">En images</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Pratiques</div>
+        <ul class="footer-links">
+          <li><a href="pilates.html">Pilates</a></li>
+          <li><a href="sophrolates.html">Sophrolates</a></li>
+          <li><a href="accompagnement.html">Accompagnement holistique</a></li>
+          <li><a href="entreprises.html">Bien-être en entreprise</a></li>
+          <li><a href="tarifs.html">Tarifs &amp; Planning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:0610234560">06 10 23 45 60</a></li>
+          <li><a href="https://www.instagram.com/moveandbreathelille" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="contact.html">19 av. Gustave Delory, Roubaix</a></li>
+          <li><a href="contact.html#access">Plan d'accès</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Move and Breathe Pilates Studio, Coralie Delahaye</span>
+      <span class="footer-credit">Site réalisé par <a href="https://mapa-developpement.fr" target="_blank" rel="noopener">Mapa Développement</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  (function () {
+    var lb = document.getElementById('lightbox');
+    if (!lb) return;
+    var lbImg = document.getElementById('lightbox-img');
+    function open(src, alt) {
+      lbImg.src = src; lbImg.alt = alt || '';
+      lb.classList.add('is-open'); lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = ''; lbImg.src = '';
+    }
+    document.querySelectorAll('[data-lightbox]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var img = a.querySelector('img');
+        open(a.getAttribute('href'), img ? img.alt : '');
+      });
+    });
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.classList.contains('lightbox-close')) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lb.classList.contains('is-open')) close();
+    });
+  })();
+</script>
+</body>
+</html>

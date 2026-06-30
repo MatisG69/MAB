@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accompagnement personnalisé, Boîte à outils · Move and Breathe Pilates Studio</title>
+<meta name="description" content="Accompagnement personnalisé au studio Move and Breathe à Roubaix Barbieux : bilan individuel, méthode De Gasquet, chaînes musculaires, sophrologie, éducation corporelle. Mal de dos, stress, péri-ménopause, posture, reprise d'activité.">
+<meta name="keywords" content="accompagnement personnalisé pilates, méthode De Gasquet Lille, chaînes musculaires, sophrologie Roubaix, mal de dos, péri-ménopause">
+<link rel="canonical" href="https://moveandbreathelille.fr/accompagnement.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Accompagnement personnalisé, Move and Breathe">
+<meta property="og:description" content="Une approche intégrative : De Gasquet, chaînes musculaires, sophrologie, respiration. Pour le mal de dos, le stress, la péri-ménopause, la posture.">
+<meta property="og:url" content="https://moveandbreathelille.fr/accompagnement.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  /* ==== INTRO ==== */
+  .intro-section {
+    background: var(--cream-soft);
+    padding: clamp(4rem, 8vw, 6rem) 0;
+  }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 6vw, 6rem);
+    align-items: center;
+  }
+  .intro-lede {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.25rem, 1.5vw, 1.45rem);
+    line-height: 1.55;
+    color: var(--teal-deep);
+    margin-bottom: 1.75rem;
+    font-weight: 400;
+  }
+  .intro-text {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin-bottom: 1.25rem;
+  }
+  .intro-image {
+    aspect-ratio: 4/5;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  .intro-image .img-panel-placeholder {
+    background: linear-gradient(160deg, var(--teal-deep), var(--teal-mid) 60%, var(--sage-deep));
+  }
+
+  /* ==== BILAN ==== */
+  .bilan-section {
+    background: var(--cream);
+    position: relative;
+  }
+  .bilan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: clamp(3rem, 6vw, 5rem);
+    align-items: center;
+  }
+  .bilan-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+  .bilan-point {
+    background: var(--cream-soft);
+    border: 1px solid var(--beige);
+    padding: 1.75rem 1.5rem;
+    border-radius: 2px;
+    transition: all 0.3s var(--ease);
+  }
+  .bilan-point:hover {
+    border-color: var(--sage-deep);
+    transform: translateY(-3px);
+  }
+  .bilan-point-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--teal);
+    margin-bottom: 0.85rem;
+    display: block;
+    line-height: 1;
+  }
+  .bilan-point h4 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--teal-deep);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.005em;
+  }
+  .bilan-point p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  /* ==== APPROACHES (5 outils) ==== */
+  .approaches {
+    background: var(--teal-deep);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+  .approaches::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(220, 227, 214, 0.05) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+  .approaches-circles-bg {
+    position: absolute;
+    top: -80px; right: -180px;
+    width: 540px; height: 540px;
+    background:
+      radial-gradient(circle at 50% 30%, var(--sage-deep) 0%, transparent 24%),
+      radial-gradient(circle at 32% 65%, var(--sage) 0%, transparent 24%),
+      radial-gradient(circle at 68% 65%, var(--sage-pale) 0%, transparent 24%);
+    opacity: 0.13;
+    pointer-events: none;
+  }
+  .approaches .container { position: relative; z-index: 1; }
+  .approaches .eyebrow { color: var(--sage); }
+  .approaches .eyebrow::before { background: var(--sage); }
+  .approaches h2 { color: var(--cream); margin: 1.5rem 0 2rem; }
+  .approaches h2 em { color: var(--sage); }
+  .approaches .lede { color: rgba(220, 227, 214, 0.75); }
+
+  .approaches-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+  .approach-card {
+    background: rgba(220, 227, 214, 0.05);
+    border: 1px solid rgba(220, 227, 214, 0.12);
+    border-radius: 2px;
+    padding: 2rem 1.75rem;
+    transition: all 0.4s var(--ease);
+  }
+  .approach-card:hover {
+    background: rgba(220, 227, 214, 0.09);
+    border-color: var(--sage);
+    transform: translateY(-4px);
+  }
+  .approach-card .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--sage);
+    line-height: 1;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+  .approach-card h3 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 0.85rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .approach-card p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: rgba(220, 227, 214, 0.75);
+  }
+
+  /* ==== SPECIFIC ACCOMPANIMENTS ==== */
+  .specific {
+    background: var(--cream);
+  }
+  .specific-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+  .specific-card {
+    background: var(--cream-soft);
+    border: 1px solid var(--beige);
+    border-radius: 2px;
+    padding: 2rem 1.85rem;
+    transition: all 0.4s var(--ease);
+    position: relative;
+    overflow: hidden;
+  }
+  .specific-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--sage-deep);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s var(--ease);
+  }
+  .specific-card:hover {
+    border-color: var(--sage-deep);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px -24px rgba(30, 72, 71, 0.18);
+  }
+  .specific-card:hover::before { transform: scaleY(1); }
+  .specific-card-icon {
+    width: 44px; height: 44px;
+    background: var(--teal-soft);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--teal);
+    margin-bottom: 1.25rem;
+  }
+  .specific-card-icon svg { width: 20px; height: 20px; }
+  .specific-card h3 {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--teal-deep);
+    margin-bottom: 0.85rem;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+  }
+  .specific-card p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  /* ==== CTA ==== */
+  .accomp-cta {
+    background: var(--beige);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .accomp-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(30, 72, 71, 0.08) 1px, transparent 0);
+    background-size: 30px 30px;
+  }
+  .accomp-cta .container { position: relative; z-index: 1; }
+  .accomp-cta-inner { max-width: 680px; margin: 0 auto; }
+  .accomp-cta h2 { margin: 1.5rem 0 1.5rem; }
+  .accomp-cta-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 2.5rem;
+  }
+  .accomp-cta-actions {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 980px) {
+    .intro-grid,
+    .bilan-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .bilan-points { grid-template-columns: 1fr; }
+    .approaches-grid { grid-template-columns: 1fr; }
+    .specific-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <a href="index.html" class="logo-mark" aria-label="Move and Breathe Pilates Studio">
+        <img src="assets/img/logo-officiel.png" alt="Move and Breathe Pilates Studio" class="logo-img">
+      </a>
+    <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+      <li><a href="le-studio.html">Le Studio</a></li>
+      <li><a href="pilates.html">Pilates</a></li>
+      <li><a href="sophrolates.html">Sophrolates</a></li>
+      <li><a href="accompagnement.html">Accompagnement holistique</a></li>
+      <li><a href="entreprises.html">Entreprises</a></li>
+      <li><a href="tarifs.html">Tarifs &amp; Planning</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div class="container">
+    <div class="page-header-inner reveal">
+      <div class="breadcrumb">
+        <a href="index.html">Accueil</a>
+        <span class="breadcrumb-sep">/</span>
+        <span>Accompagnement personnalisé</span>
+      </div>
+      <div class="eyebrow">Accompagnement personnalisé</div>
+      <h1 class="h-mega mt-2">
+        Une <em>approche intégrative</em>,<br>
+        pas une méthode unique.
+      </h1>
+      <p class="lede mt-3">
+        Selon votre histoire, vos douleurs, vos objectifs et le moment de votre vie, je combine plusieurs approches, toutes complémentaires, toutes au service de votre corps.
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- INTRO -->
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="reveal">
+        <div class="eyebrow">L'approche</div>
+        <h2 class="h-2 mt-2">Adapter, <em>toujours</em></h2>
+        <p class="intro-lede">
+          Chaque corps a son histoire, ses points sensibles, ses forces. Aucun programme préfabriqué ne tient compte de ça.
+        </p>
+        <p class="intro-text">
+          C'est pour cette raison que j'ai construit, au fil des années, une approche intégrative, un ensemble de méthodes que je combine pour répondre précisément à ce dont vous avez besoin. Mal de dos chronique, retour au sport après une pause, péri-ménopause, posture fatiguée, stress accumulé : chaque situation appelle une approche différente.
+        </p>
+        <p class="intro-text">
+          Le travail commence toujours par un bilan, pour comprendre, observer, écouter. Ensuite seulement, le programme se construit, séance après séance, en s'ajustant.
+        </p>
+      </div>
+      <div class="intro-image reveal reveal-delay-2">
+        <div class="img-panel">
+          <img src="assets/img/accompagnement-bilan.jpg" alt="Séance d'accompagnement personnalisé et de bilan postural au studio Move and Breathe" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BILAN -->
+<section class="bilan-section" id="bilan">
+  <div class="container">
+    <div class="bilan-grid">
+      <div class="reveal">
+        <div class="eyebrow">Première étape</div>
+        <h2 class="h-2 mt-2">Le <em>bilan individuel</em></h2>
+        <p class="body-text mt-3">
+          Tout commence ici. Une séance dédiée à comprendre votre corps, vos habitudes, votre histoire, pour construire un programme qui vous ressemble vraiment.
+        </p>
+        <p class="body-text">
+          Sans bilan préalable, l'accompagnement reste générique. Avec, il devient véritablement le vôtre.
+        </p>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="bilan-points">
+          <div class="bilan-point">
+            <span class="bilan-point-num">01</span>
+            <h4>Posture</h4>
+            <p>Observation statique et dynamique : alignement, asymétries, points de tension installés.</p>
+          </div>
+          <div class="bilan-point">
+            <span class="bilan-point-num">02</span>
+            <h4>Respiration</h4>
+            <p>Qualité du souffle, mobilité du diaphragme, schéma respiratoire au repos et au mouvement.</p>
+          </div>
+          <div class="bilan-point">
+            <span class="bilan-point-num">03</span>
+            <h4>Mobilité</h4>
+            <p>Articulations, chaînes musculaires, amplitudes, ce qui se bouge librement, ce qui résiste.</p>
+          </div>
+          <div class="bilan-point">
+            <span class="bilan-point-num">04</span>
+            <h4>Habitudes corporelles</h4>
+            <p>Posture de travail, sommeil, activité physique, gestes du quotidien qui marquent le corps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROCHES COMPLÉMENTAIRES -->
+<section class="approaches" id="approches">
+  <div class="approaches-circles-bg" aria-hidden="true" data-parallax="0.18"></div>
+  <div class="container">
+    <div class="reveal" style="max-width: 760px;">
+      <div class="eyebrow">Les approches complémentaires</div>
+      <h2 class="h-2">Cinq <em>outils</em>,<br>combinés selon vos besoins</h2>
+      <p class="lede">Chacune de ces approches apporte une réponse spécifique. Selon votre profil, j'en mobilise plusieurs, parfois toutes, pour construire votre programme.</p>
+    </div>
+
+    <div class="approaches-grid">
+      <div class="approach-card reveal reveal-delay-1">
+        <span class="num">01</span>
+        <h3>Méthode De Gasquet</h3>
+        <p>Approche posturale et respiratoire du périnée et des abdominaux. Précieuse pour le post-partum, les douleurs lombaires, la péri-ménopause, et toute situation où le centre du corps doit se réparer.</p>
+      </div>
+      <div class="approach-card reveal reveal-delay-2">
+        <span class="num">02</span>
+        <h3>Chaînes musculaires</h3>
+        <p>Travail des liens musculaires qui parcourent le corps en chaînes, pas muscle par muscle. Permet de comprendre comment une douleur de pied peut venir du bassin, ou un mal de cou d'une tension dans les hanches.</p>
+      </div>
+      <div class="approach-card reveal reveal-delay-3">
+        <span class="num">03</span>
+        <h3>Travail respiratoire</h3>
+        <p>Le souffle comme outil thérapeutique : régulation du système nerveux, libération des tensions diaphragmatiques, soutien postural. La respiration n'est jamais accessoire, elle structure tout.</p>
+      </div>
+      <div class="approach-card reveal reveal-delay-1">
+        <span class="num">04</span>
+        <h3>Sophrologie</h3>
+        <p>Relaxation dynamique, ancrage, visualisation, gestion des émotions. Pour le stress, l'anxiété, le sommeil, mais aussi la préparation d'un événement ou l'accompagnement d'une période de vie difficile.</p>
+      </div>
+      <div class="approach-card reveal reveal-delay-2">
+        <span class="num">05</span>
+        <h3>Éducation corporelle</h3>
+        <p>Apprendre à se servir de son corps au quotidien : se baisser, se relever, porter, marcher, dormir. C'est dans les gestes ordinaires que se cachent les mauvaises habitudes, et la transformation.</p>
+      </div>
+      <div class="approach-card reveal reveal-delay-3" style="background: rgba(191, 213, 207, 0.08); border-color: var(--sage); border-width: 1.5px;">
+        <span class="num" style="color: var(--cream);">+</span>
+        <h3>Combinaison personnalisée</h3>
+        <p>Chaque programme est unique. Je choisis, dose, séquence ces outils selon vos besoins du moment, et je les fais évoluer au fil de votre progression.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIFIC ACCOMPANIMENTS -->
+<section class="specific" id="specifiques">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow center">Accompagnements spécifiques</div>
+      <h2 class="h-2 mt-2">Pour les <em>situations particulières</em></h2>
+      <p class="lede mt-2">Certaines situations demandent une approche pensée spécifiquement. Voici les accompagnements pour lesquels je suis formée et que je pratique régulièrement au studio.</p>
+    </div>
+
+    <div class="specific-grid">
+      <article class="specific-card reveal reveal-delay-1">
+        <div class="specific-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 4v16M6 8c0 4 0 8 6 12M18 8c0 4 0 8-6 12"/>
+          </svg>
+        </div>
+        <h3>Mal de dos &amp; lombalgies</h3>
+        <p>Travail postural profond, mobilité du bassin, renforcement des muscles stabilisateurs. Approche douce, ciblée, avec De Gasquet pour les douleurs lombaires installées.</p>
+      </article>
+
+      <article class="specific-card reveal reveal-delay-2">
+        <div class="specific-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 7v5l3 3"/>
+          </svg>
+        </div>
+        <h3>Stress &amp; anxiété</h3>
+        <p>Respiration, sophrologie, Sophrolates, apprendre à réguler son système nerveux. Pour le stress chronique, l'anxiété, les moments de vie qui débordent.</p>
+      </article>
+
+      <article class="specific-card reveal reveal-delay-3">
+        <div class="specific-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12l4-4 4 4-4 4z"/>
+            <path d="M14 12l4-4 4 4-4 4z"/>
+            <path d="M10 12h4"/>
+          </svg>
+        </div>
+        <h3>Reprise d'activité</h3>
+        <p>Après une longue pause, une blessure, une grossesse, un arrêt prolongé. Reconstruire progressivement, sans précipitation, sur des bases solides.</p>
+      </article>
+
+      <article class="specific-card reveal reveal-delay-1">
+        <div class="specific-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <h3>Péri-ménopause &amp; ménopause</h3>
+        <p>Une période où le corps change profondément. Accompagnement spécifique pour la posture, les os, le périnée, le sommeil, l'humeur, avec De Gasquet et sophrologie.</p>
+      </article>
+
+      <article class="specific-card reveal reveal-delay-2">
+        <div class="specific-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="4" x2="12" y2="20"/>
+            <polyline points="9,7 12,4 15,7"/>
+            <polyline points="9,17 12,20 15,17"/>
+          </svg>
+        </div>
+        <h3>Amélioration de la posture</h3>
+        <p>Pour celles et ceux qui sentent que leur posture leur fait défaut, au bureau, dans le quotidien, dans le miroir. Reconstruire un alignement juste, durable.</p>
+      </article>
+
+      <article class="specific-card reveal reveal-delay-3">
+        <div class="specific-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-7 8-13a8 8 0 10-16 0c0 6 8 13 8 13z"/>
+            <circle cx="12" cy="9" r="3"/>
+          </svg>
+        </div>
+        <h3>Prévention des douleurs</h3>
+        <p>Avant que ça fasse mal. Un travail patient pour renforcer ce qui va lâcher, mobiliser ce qui se raidit, équilibrer ce qui tire, pour des années de mouvement libre.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section soft">
+  <div class="container">
+    <div class="section-head center reveal">
+      <div class="eyebrow center">Questions fréquentes</div>
+      <h2 class="h-2 mt-2">L'accompagnement <em>en pratique</em></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">Travaillez-vous avec des personnes souffrant de douleurs chroniques ?<span class="faq-q-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Chaque situation est étudiée individuellement afin d'adapter la pratique aux besoins et aux capacités de chacun.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Utilisez-vous d'autres approches que le Pilates ?<span class="faq-q-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Oui. Selon les besoins, j'intègre également des outils issus de la méthode De Gasquet, de la sophrologie et du travail des chaînes musculaires.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Comment se déroule un premier rendez-vous ?<span class="faq-q-icon" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Tout commence par une séance Bilan/Découverte à 45 € : on observe la posture, la respiration, la mobilité et les habitudes corporelles, pour construire ensuite un programme qui vous ressemble vraiment.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="accomp-cta">
+  <div class="container">
+    <div class="accomp-cta-inner reveal">
+      <div class="eyebrow center">Premier bilan</div>
+      <h2 class="h-1">Commencer<br>par un <em>vrai bilan</em></h2>
+      <p class="accomp-cta-text">
+        L'accompagnement personnalisé commence toujours par une <strong style="color: var(--teal); font-weight: 500;">séance Bilan/Découverte à 45 €</strong> (valable une fois), posture, respiration, mobilité, habitudes corporelles. C'est sur cette base que se construit votre programme.
+      </p>
+      <div class="accomp-cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-magnetic">Réserver mon bilan à 45 €</a>
+        <a href="tarifs.html" class="btn btn-outline">
+          Voir tous les tarifs
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Move <span>&amp;</span> Breathe</div>
+        <p class="footer-tagline">Studio de Pilates à Roubaix Barbieux. Approche personnalisée corps-esprit, par Coralie Delahaye.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/moveandbreathelille" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.5.9.5.5.7.9.9 1.5.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.5-.5.5-.9.7-1.5.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.5-.9-.5-.5-.7-.9-.9-1.5-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.5.5-.5.9-.7 1.5-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.6-.1 4.8-.1zm0 5.4a4.4 4.4 0 100 8.8 4.4 4.4 0 000-8.8zm0 7.2a2.8 2.8 0 110-5.6 2.8 2.8 0 010 5.6zm5.6-7.4a1 1 0 11-2.1 0 1 1 0 012.1 0z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.4-3H14V4.6c0-.9.3-1.5 1.6-1.5H17.5V.4C17.1.3 16.1.2 15 .2 12.6.2 11 1.7 11 4.3V6H8.2v3H11v9h3V9z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3V9zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 22 10.5 22 14v7h-4v-6.2c0-1.5-.03-3.4-2.07-3.4-2.08 0-2.4 1.6-2.4 3.3V21H9V9z"/></svg>
+          </a>
+          <a href="mailto:moveandbreathelille@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Studio</div>
+        <ul class="footer-links">
+          <li><a href="qui-suis-je.html">Qui suis-je</a></li>
+          <li><a href="qui-suis-je.html#parcours">Mon parcours</a></li>
+          <li><a href="le-studio.html">Le Studio</a></li>
+          <li><a href="le-studio.html#lieu">Le lieu</a></li>
+          <li><a href="le-studio.html#galerie">En images</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Pratiques</div>
+        <ul class="footer-links">
+          <li><a href="pilates.html">Pilates</a></li>
+          <li><a href="sophrolates.html">Sophrolates</a></li>
+          <li><a href="accompagnement.html">Accompagnement holistique</a></li>
+          <li><a href="entreprises.html">Bien-être en entreprise</a></li>
+          <li><a href="tarifs.html">Tarifs &amp; Planning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:0610234560">06 10 23 45 60</a></li>
+          <li><a href="https://www.instagram.com/moveandbreathelille" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="contact.html">19 av. Gustave Delory, Roubaix</a></li>
+          <li><a href="contact.html#access">Plan d'accès</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Move and Breathe Pilates Studio, Coralie Delahaye</span>
+      <span class="footer-credit">Site réalisé par <a href="https://mapa-developpement.fr" target="_blank" rel="noopener">Mapa Développement</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
