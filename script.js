@@ -364,32 +364,74 @@
      ============================================ */
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
+    const CONTACT_EMAIL = 'moveandbreathelille@gmail.com';
+    const status = contactForm.querySelector('#form-status');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    const showStatus = (message, isError) => {
+      if (!status) return;
+      status.textContent = message;
+      status.classList.toggle('is-error', !!isError);
+      status.style.display = 'block';
+    };
+
+    contactForm.addEventListener('submit', async function (e) {
       e.preventDefault();
+
       const data = new FormData(contactForm);
       const name = (data.get('name') || '').toString().trim();
       const email = (data.get('email') || '').toString().trim();
       const phone = (data.get('phone') || '').toString().trim();
       const subject = (data.get('subject') || 'Demande de contact').toString().trim();
       const message = (data.get('message') || '').toString().trim();
+      const company = (data.get('company') || '').toString().trim(); // honeypot
 
-      const body =
-        `Nom : ${name}%0D%0A` +
-        `Email : ${email}%0D%0A` +
-        `Téléphone : ${phone}%0D%0A%0D%0A` +
-        `${encodeURIComponent(message)}`;
+      if (!name || !email || !message) {
+        showStatus('Merci de renseigner votre nom, votre email et votre message.', true);
+        return;
+      }
 
-      const mailto = `mailto:contact@moveandbreathelille.fr?subject=${encodeURIComponent(
-        subject
-      )}&body=${body}`;
+      const originalBtn = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.setAttribute('aria-busy', 'true');
+        submitBtn.innerHTML = 'Envoi en cours…';
+      }
+      showStatus('Envoi de votre message…', false);
 
-      window.location.href = mailto;
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, phone, subject, message, company }),
+        });
 
-      const status = document.querySelector('#form-status');
-      if (status) {
-        status.textContent =
-          'Votre client mail va s’ouvrir. Si ce n’est pas le cas, écrivez directement à contact@moveandbreathelille.fr';
-        status.style.display = 'block';
+        let payload = {};
+        try { payload = await res.json(); } catch (_) { /* réponse non JSON */ }
+
+        if (res.ok && payload.ok) {
+          contactForm.reset();
+          showStatus('Merci ' + name + ' ! Votre message a bien été envoyé. Le studio vous répond rapidement.', false);
+        } else {
+          throw new Error((payload && payload.error) || 'Erreur serveur');
+        }
+      } catch (err) {
+        // Repli : proposer l'envoi par email direct si le serveur est indisponible.
+        const body =
+          `Nom : ${name}%0D%0A` +
+          `Email : ${email}%0D%0A` +
+          `Téléphone : ${phone}%0D%0A%0D%0A` +
+          `${encodeURIComponent(message)}`;
+        const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
+        showStatus(
+          'L’envoi automatique n’a pas abouti. Vous pouvez nous écrire directement à ' + CONTACT_EMAIL + ' — votre client mail va s’ouvrir.',
+          true
+        );
+        window.location.href = mailto;
+      } finally {
+        if (submitBtn) {
+          submitBtn.removeAttribute('aria-busy');
+          submitBtn.innerHTML = originalBtn;
+        }
       }
     });
   }
