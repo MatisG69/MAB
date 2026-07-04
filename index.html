@@ -52,36 +52,21 @@
   .hero-title {
     font-family: var(--serif);
     font-weight: 400;
-    font-size: clamp(2.6rem, 6vw, 5.8rem);
-    line-height: 0.98;
+    font-size: clamp(2rem, 4.4vw, 4rem);
+    line-height: 1.08;
     letter-spacing: -0.012em;
     color: var(--teal-deep);
     margin-bottom: 2rem;
   }
   .hero-title em { font-style: italic; color: var(--teal); font-weight: 400; }
-  .hero-signature {
-    position: relative;
+  .hero-brand {
     font-family: var(--serif);
-    font-weight: 400;
-    font-size: clamp(1.35rem, 2.1vw, 1.95rem);
-    line-height: 1.3;
-    letter-spacing: -0.005em;
-    color: var(--teal-deep);
-    max-width: 540px;
-    margin: -0.75rem 0 2rem;
-    padding-left: 1.35rem;
+    font-size: clamp(1.3rem, 1.9vw, 1.75rem);
+    font-style: italic;
+    color: var(--teal);
+    letter-spacing: 0.005em;
+    margin-bottom: 0.85rem;
   }
-  .hero-signature::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.35em;
-    bottom: 0.35em;
-    width: 3px;
-    border-radius: 3px;
-    background: var(--sage);
-  }
-  .hero-signature em { font-style: italic; color: var(--teal); }
   .hero-title .amp {
     font-style: italic;
     color: var(--sage-deep);
@@ -1102,8 +1087,8 @@
 <header class="hero">
   <div class="hero-content">
     <div class="hero-eyebrow eyebrow reveal">Pilates · Sophrolates · Accompagnement holistique</div>
-    <h1 class="hero-title split-text reveal reveal-delay-1">Un corps plus fort, plus mobile, <em>plus équilibré.</em></h1>
-    <p class="hero-signature reveal reveal-delay-2">Vous accompagner vers un mouvement <em>qui libère</em> et une respiration <em>qui apaise</em>.</p>
+    <div class="hero-brand reveal reveal-delay-1">Move and Breathe</div>
+    <h1 class="hero-title split-text reveal reveal-delay-2">Vous accompagner vers un mouvement qui libère et une respiration qui apaise.</h1>
     <p class="hero-desc reveal reveal-delay-3">
       Studio de Pilates à Roubaix Barbieux. Une approche personnalisée du mouvement et de la respiration, parce que chaque corps est unique et mérite un accompagnement personnalisé.
     </p>
@@ -1176,7 +1161,7 @@
     <div class="practices-grid">
       <a href="pilates.html" class="practice-card reveal reveal-delay-1">
         <div class="practice-visual">
-          <img src="assets/img/pilates-tapis.jpg" alt="Cours de Pilates sur tapis" loading="lazy">
+          <img src="assets/img/pilates-cercle.jpg" alt="Cours de Pilates avec cercle magique au studio Move and Breathe" loading="lazy">
           <span class="practice-number">01</span>
         </div>
         <div class="practice-content">
@@ -1189,7 +1174,7 @@
 
       <a href="sophrolates.html" class="practice-card reveal reveal-delay-2">
         <div class="practice-visual">
-          <img src="assets/img/sophrolates-relax.jpg" alt="Sophrolates : lâcher-prise et respiration, un moment de reconnexion à soi" loading="lazy">
+          <img src="assets/img/sophrolates-enfant.jpg" alt="Sophrolates : posture de l'enfant sur le tapis, lâcher-prise et respiration, un moment de reconnexion à soi" loading="lazy">
           <span class="practice-number">02</span>
         </div>
         <div class="practice-content">
@@ -1202,7 +1187,7 @@
 
       <a href="accompagnement.html" class="practice-card reveal reveal-delay-3">
         <div class="practice-visual">
-          <img src="assets/img/accompagnement-bilan.jpg" alt="Accompagnement personnalisé et bilan" loading="lazy">
+          <img src="assets/img/coralie-correction.jpg" alt="Coralie corrige une élève lors d'un accompagnement personnalisé" loading="lazy">
           <span class="practice-number">03</span>
         </div>
         <div class="practice-content">
@@ -1264,11 +1249,11 @@
         <div class="reviews-track">
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">Coralie est un rayon de soleil. D'une positivité rare, elle sait rendre l'effort agréable et s'adapte à chaque morphologie afin que l'exercice soit pleinement profitable. Ses cours sont variés et évoluent au fil de l'année. Une personne chaleureuse, accueillante et bienveillante. L'essayer c'est l'adopter.</p>
+            <p class="review-text">Je prends des cours avec Coralie depuis plus de 2 ans maintenant et c'est toujours le même plaisir à y aller ! Un vrai moment pour moi. Coralie est très agréable, bienveillante, professionnelle, et toujours attentive à mes sensations.</p>
             <div class="review-author">
-              <div class="review-avatar">A</div>
+              <div class="review-avatar">J</div>
               <div>
-                <div class="review-name">Aurélie M.</div>
+                <div class="review-name">Justine I.</div>
                 <div class="review-meta">Avis Google</div>
               </div>
             </div>
@@ -1276,59 +1261,59 @@
 
           <article class="review-card">
             <div class="review-stars">★★★★★</div>
-            <p class="review-text">Coralie est adorable et très compétente. Je souffrais du dos et c'est ce qui m'a fait débuter cette discipline. Au bout de la cinquième séance c'était terminé, et avec une pratique régulière je me sens libérée. Franchement je recommande le Pilates et Coralie en particulier.</p>
+            <p class="review-text">Supers cours collectifs dans une ambiance conviviale (5 à 6 participants), de Pilates et stretching dispensés par Coralie Delahaye, coach diplômée. À la fois dynamique, professionnelle, et qui a l'œil permanent sur chaque élève.</p>
+            <div class="review-author">
+              <div class="review-avatar">K</div>
+              <div>
+                <div class="review-name">Kate C.</div>
+                <div class="review-meta">Local Guide · Avis Google</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Coralie coache à merveille, dans son studio chaleureux avec vue sur la nature. Elle est aux petits soins, très attentive, à l'écoute de vos besoins, de votre rythme, de vos douleurs. Elle s'adapte. Elle est très professionnelle.</p>
+            <div class="review-author">
+              <div class="review-avatar">D</div>
+              <div>
+                <div class="review-name">Dorothée V.</div>
+                <div class="review-meta">Avis Google</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Cela fait 4 ans que je pratique le Pilates avec Coralie et je n'ai plus aucune douleur au dos. Mon heure hebdomadaire est un véritable moment de détente tout en me renforçant musculairement grâce à des exercices adaptés.</p>
+            <div class="review-author">
+              <div class="review-avatar">G</div>
+              <div>
+                <div class="review-name">Géraldine T.</div>
+                <div class="review-meta">Avis Google</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Je recommande vivement les cours de Pilates de Coralie ! La qualité de l'enseignement est remarquable : chaque séance est préparée avec soin, dans une ambiance à la fois bienveillante et motivante.</p>
+            <div class="review-author">
+              <div class="review-avatar">D</div>
+              <div>
+                <div class="review-name">Diyana C.</div>
+                <div class="review-meta">Avis Google</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">Cela fait presqu'un an que je viens au cours de Coralie et j'apprécie beaucoup. C'est une professeure très compétente et vraiment attentive à chacun pour améliorer nos postures. Le lieu est très agréable, l'ambiance cordiale et respectueuse. C'est le meilleur cours de gym que j'aie testé !</p>
             <div class="review-author">
               <div class="review-avatar">S</div>
               <div>
-                <div class="review-name">Sophie L.</div>
-                <div class="review-meta">Avis Google</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">Un très bon cours qui prend soin du corps et de l'esprit. Un temps pour soi agréable et bienfaisant. Coralie prend soin de nous en fonction de notre état, de nos douleurs (dos, genoux), mais aussi avec un vrai travail en profondeur. Topissime.</p>
-            <div class="review-author">
-              <div class="review-avatar">C</div>
-              <div>
-                <div class="review-name">Claire D.</div>
-                <div class="review-meta">Avis Google</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">Je pratique le Pilates depuis deux ans avec Coralie et je suis ravie. Coralie est très compétente et les cours se déroulent de manière agréable. J'en retire beaucoup de satisfaction et de bénéfices au niveau musculaire et de la posture ; mon corps est plus tonique et plus fluide.</p>
-            <div class="review-author">
-              <div class="review-avatar">M</div>
-              <div>
-                <div class="review-name">Marie P.</div>
-                <div class="review-meta">Avis Google</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">Coralie m'a fait découvrir les Sophrolates, une combinaison de Pilates et de Sophrologie, parfait pour moi qui souffre facilement du dos et qui suis tendue de nature. On ressent les bienfaits associés de ces deux pratiques. Je recommande particulièrement !</p>
-            <div class="review-author">
-              <div class="review-avatar">N</div>
-              <div>
-                <div class="review-name">Nathalie B.</div>
-                <div class="review-meta">Avis Google</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text">Si vous cherchez un lieu pour prendre des cours de Pilates, foncez les yeux fermés chez Move and Breathe. Coralie est à l'écoute, vous accompagne en douceur et vous fait progresser séance après séance.</p>
-            <div class="review-author">
-              <div class="review-avatar">É</div>
-              <div>
-                <div class="review-name">Émilie R.</div>
+                <div class="review-name">Sandrine M.</div>
                 <div class="review-meta">Avis Google</div>
               </div>
             </div>

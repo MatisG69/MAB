@@ -399,34 +399,41 @@
       showStatus('Envoi de votre message…', false);
 
       try {
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email, phone, subject, message, company }),
-        });
+        let res;
+        try {
+          res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, phone, subject, message, company }),
+          });
+        } catch (networkErr) {
+          // Vrai échec réseau (serveur injoignable) → repli mailto.
+          const body =
+            `Nom : ${name}%0D%0A` +
+            `Email : ${email}%0D%0A` +
+            `Téléphone : ${phone}%0D%0A%0D%0A` +
+            `${encodeURIComponent(message)}`;
+          const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
+          showStatus(
+            'Connexion impossible au serveur. Vous pouvez nous écrire directement à ' + CONTACT_EMAIL + ' — votre client mail va s’ouvrir.',
+            true
+          );
+          window.location.href = mailto;
+          return;
+        }
 
+        const raw = await res.text();
         let payload = {};
-        try { payload = await res.json(); } catch (_) { /* réponse non JSON */ }
+        try { payload = raw ? JSON.parse(raw) : {}; } catch (_) { /* réponse non JSON */ }
 
         if (res.ok && payload.ok) {
           contactForm.reset();
           showStatus('Merci ' + name + ' ! Votre message a bien été envoyé. Le studio vous répond rapidement.', false);
         } else {
-          throw new Error((payload && payload.error) || 'Erreur serveur');
+          // Le serveur a répondu mais avec une erreur → on affiche la vraie raison.
+          const detail = (payload && payload.error) ? payload.error : (raw || ('Erreur ' + res.status));
+          showStatus('Échec de l’envoi (' + res.status + ') : ' + detail, true);
         }
-      } catch (err) {
-        // Repli : proposer l'envoi par email direct si le serveur est indisponible.
-        const body =
-          `Nom : ${name}%0D%0A` +
-          `Email : ${email}%0D%0A` +
-          `Téléphone : ${phone}%0D%0A%0D%0A` +
-          `${encodeURIComponent(message)}`;
-        const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
-        showStatus(
-          'L’envoi automatique n’a pas abouti. Vous pouvez nous écrire directement à ' + CONTACT_EMAIL + ' — votre client mail va s’ouvrir.',
-          true
-        );
-        window.location.href = mailto;
       } finally {
         if (submitBtn) {
           submitBtn.removeAttribute('aria-busy');
