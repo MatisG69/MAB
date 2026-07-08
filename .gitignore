@@ -1,0 +1,13 @@
+# Variables d'environnement (clés API, secrets) — ne jamais committer
+.env
+.env.local
+.env.*.local
+
+# Dépendances
+node_modules/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
