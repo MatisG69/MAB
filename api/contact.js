@@ -5,11 +5,10 @@
 // Adresse qui reçoit les messages du formulaire.
 const TO_EMAIL = 'moveandbreathelille@gmail.com';
 
-// Expéditeur. Par défaut on utilise le domaine de test Resend (onboarding@resend.dev),
-// qui fonctionne immédiatement sans configuration. Une fois le domaine
-// moveandbreathelille.fr vérifié dans Resend, définir la variable d'environnement
-// CONTACT_FROM = "Move and Breathe <contact@moveandbreathelille.fr>".
-const FROM_EMAIL = process.env.CONTACT_FROM || 'Move and Breathe <onboarding@resend.dev>';
+// Expéditeur : le domaine moveandbreathelille.com est vérifié dans Resend
+// (SPF/DKIM/DMARC configurés), ce qui garantit la délivrabilité (pas de spam).
+// On peut surcharger l'adresse via la variable d'environnement CONTACT_FROM.
+const FROM_EMAIL = process.env.CONTACT_FROM || 'Move and Breathe <contact@moveandbreathelille.com>';
 
 function escapeHtml(str) {
   return String(str)
