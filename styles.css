@@ -727,6 +727,14 @@ footer::before {
   transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 .footer-credit a:hover { color: var(--sage); border-color: var(--sage); }
+.footer-legal-links { margin-left: auto; display: flex; gap: 1.2rem; flex-wrap: wrap; }
+.footer-legal-links a {
+  color: rgba(241, 237, 224, 0.55);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(241, 237, 224, 0.18);
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.footer-legal-links a:hover { color: var(--sage); border-color: var(--sage); }
 
 footer .logo-mark-title { color: var(--cream); }
 footer .logo-mark-title em { color: var(--sage); }
@@ -1170,6 +1178,7 @@ footer .logo-mark-sub { color: var(--sage); }
   .footer-grid > div:first-child { grid-column: 1 / -1; }
   .footer-bottom { flex-direction: column; text-align: center; justify-content: center; }
   .footer-credit { position: static; transform: none; left: auto; padding-top: 0.75rem; }
+  .footer-legal-links { margin-left: 0; justify-content: center; }
   .form-row-2 { grid-template-columns: 1fr; }
 }
 
